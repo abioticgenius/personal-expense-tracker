@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker - Edit Expense</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento&family=Lora&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #F5EE9E;
+            font-family: 'Quattrocento';
+        }
+
+        h1 {
+            font-family: 'Lora';
+            font-size: 50px;
+            text-align: center;
+            color: #AB3428;
+        }
+
+        .navbar {
+            background-color: #AB3428;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #F49E4C;
+            color: white;
+        }
+
+        .enter-btn {
+            background-color: #7BFF6E;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: double black;
+        }
+
+        .delete-btn {
+            background-color: #FF6E6E;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        label {
+            font-size: 20px;
+            font-family: 'Lora';
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Expense Tracker - Edit Expense</h1>
+    <form action="{{ url_for('edit_expense', id=expense.id) }}" method="POST">
+        <label for="month">Month:</label><br>
+        <input type="text" name="month" value="{{ expense.month }}" required><br><br>
+        <label for="income">Income:</label><br>
+        <input type="number" name="income" value="{{ expense.income }}" required><br><br>
+        <label for="groceries">Groceries:</label><br>
+        <input type="number" name="groceries" value="{{ expense.groceries }}" required><br><br>
+        <label for="fuel">Fuel:</label><br>
+        <input type="number" name="fuel" value="{{ expense.fuel }}" required><br><br>
+        <label for="bills">Bills:</label><br>
+        <input type="number" name="bills" value="{{ expense.bills }}" required><br><br>
+        <label for="rent">Rent:</label><br>
+        <input type="number" name="rent" value="{{ expense.rent }}" required><br><br>
+        <label for="misc">Miscellaneous Expenses:</label><br>
+        <input type="number" name="misc" value="{{ expense.misc }}" required><br><br>
+        <input type="submit" value="Save Changes">
+    </form>
+</body>
+
+</html>

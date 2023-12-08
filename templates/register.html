@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento&family=Lora&display=swap" rel="stylesheet">
+
+    <title>Register Page</title>
+    <style>
+        body {
+            background-image: url(https://media.discordapp.net/attachments/1156564649941160017/1182636316127678494/ad13afd8-964c-48a7-8282-ccb8845d2c41.png?ex=65856ae6&is=6572f5e6&hm=e0e417f6b8cd1dbb786affd665edcedd87b0c02849380a782210df7763ee8060&=);
+
+            display: flex;
+            align-items: center;
+            font-family: 'Quattrocento';
+            justify-content: center;
+            height: 100vh;
+            background-color: #86bdcc;
+            margin: 0;
+        }
+
+        .register-box {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #86bdcc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register-box">
+        <h1>Register</h1>
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <form method="post" action="{{ url_for('register') }}">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+    </div>
+</body>
+
+</html>

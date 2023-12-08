@@ -1,0 +1,50 @@
+body {
+    background-color: #F5EE9E;
+}
+
+.navbar {
+    background-color: #AB3428;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #F49E4C;
+    color: white;
+}
+
+.enter-btn {
+    background-color: #7BFF6E;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #FF6E6E;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

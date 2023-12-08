@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker - Delete Expense</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <h1>Expense Tracker - Delete Expense</h1>
+    <p>Are you sure you want to delete the expense?</p>
+    <br>
+    <a href="{{ url_for('delete', id=expense.id) }}">Yes, delete</a>&nbsp;
+    <a href="{{ url_for('index') }}">No, go back</a>
+</body>
+
+</html>
